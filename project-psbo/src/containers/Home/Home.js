@@ -15,39 +15,80 @@ import {
 import SearchIcon from "@material-ui/icons/Search";
 import TemmplateNavigation from "components/layouts/TemplateNavigation";
 import React from "react";
-import Room from "assets/audit.png";
+import Classroom from "assets/audit.png";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const roomDummy = [
   {
     title: "Auditorium 1",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium 2",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium 3",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium 4",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium 5",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium 6",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium 7",
-    media: Room,
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
+  },
+  {
+    title: "Auditorium 7",
+    media: Classroom,
   },
 ];
 
@@ -55,22 +96,22 @@ const calendarDummy = [
   {
     title: "Auditorium Toyib Hadiwijaya",
     time: "Pukul 10.00 - 14.00 WIB",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium Toyib Hadiwijaya",
     time: "Pukul 10.00 - 14.00 WIB",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium Toyib Hadiwijaya",
     time: "Pukul 10.00 - 14.00 WIB",
-    media: Room,
+    media: Classroom,
   },
   {
     title: "Auditorium Toyib Hadiwijaya",
     time: "Pukul 10.00 - 14.00 WIB",
-    media: Room,
+    media: Classroom,
   },
 ];
 
@@ -156,18 +197,20 @@ function Home() {
               {roomDummy.map((data) => (
                 <Grid item xs={4}>
                   <Card>
-                    <CardActionArea>
-                      <CardMedia
-                        className={classes.media}
-                        image={data.media}
-                        title={data.title}
-                      />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                          {data.title}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
+                    <Link to="/detail-ruangan">
+                      <CardActionArea>
+                        <CardMedia
+                          className={classes.media}
+                          image={data.media}
+                          title={data.title}
+                        />
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" component="h2">
+                            {data.title}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Link>
                   </Card>
                 </Grid>
               ))}
