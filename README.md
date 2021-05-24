@@ -19,13 +19,13 @@ Trello: https://trello.com/b/ykm9C6zl/mamen-family-psbo
             <td>1</td>
             <td>Zahwa Wahyu Riana</td>
             <td>G64180070</td>
-            <td>Front-End</td>
+            <td>Front-End & Back-End</td>
         </tr>
         <tr>
             <td>2</td>
             <td>Ali Naufal Ammarullah</td>
             <td>G64180080</td>
-            <td>Project Manager & Back-end</td>
+            <td>Project Manager & Back-End</td>
         </tr>
         <tr>
             <td>3</td>
