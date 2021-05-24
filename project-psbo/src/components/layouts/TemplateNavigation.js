@@ -16,7 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { withRouter } from "react-router";
-import { Box } from "@material-ui/core";
+import { Box, Container } from "@material-ui/core";
 import { Home, PostAdd } from "@material-ui/icons";
 import Account from "./Account";
 
@@ -103,12 +103,12 @@ function TemplateNavigation(props) {
     {
       text: "Beranda",
       icon: <Home />,
-      onClick: () => history.push("/login"),
+      onClick: () => history.push("/beranda"),
     },
     {
       text: "Pengajuan",
       icon: <PostAdd />,
-      onClick: () => history.push("/beranda"),
+      onClick: () => history.push("/pengajuan"),
     },
   ];
 
@@ -191,7 +191,7 @@ function TemplateNavigation(props) {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        {children}
+        <Container maxWidth="xl">{children}</Container>
       </main>
     </div>
   );
