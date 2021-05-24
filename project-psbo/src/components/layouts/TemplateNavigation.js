@@ -191,7 +191,7 @@ function TemplateNavigation(props) {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Container maxWidth="xl">{children}</Container>
+        <Container maxWidth="lg">{children}</Container>
       </main>
     </div>
   );
