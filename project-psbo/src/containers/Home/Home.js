@@ -152,7 +152,7 @@ function Home() {
   return (
     <TemmplateNavigation>
       <Box mb={3}>
-        <Typography variant="h3">Beranda</Typography>
+        <Typography variant="h2">Beranda</Typography>
       </Box>
       <Grid container spacing={3}>
         <Grid item xs={12} md={8}>
