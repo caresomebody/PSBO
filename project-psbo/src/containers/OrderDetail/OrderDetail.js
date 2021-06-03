@@ -1,8 +1,6 @@
 import { Box, makeStyles, Typography, Card, CardContent, Divider, Grid } from "@material-ui/core";
 import TemplateNavigation from "components/layouts/TemplateNavigation";
 import React, {useState} from "react";
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import theme from "styles/theme";
 import BaseTable from "components/display/BaseTable";
 import { pdfjs, Document, Page } from 'react-pdf';
