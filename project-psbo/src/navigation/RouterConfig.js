@@ -5,6 +5,7 @@ import Home from "containers/Home/Home";
 import RoomDetail from "containers/RoomDetail/RoomDetail";
 import Order from "containers/Order/Order";
 import OrderDetail from "containers/OrderDetail/OrderDetail";
+import HomeAdmin from "containers/HomeAdmin/HomeAdmin";
 
 function RouterConfig() {
   return (
@@ -14,6 +15,7 @@ function RouterConfig() {
       <Route exact path="/detail-ruangan" component={RoomDetail} />
       <Route exact path="/pengajuan" component={Order} />
       <Route exact path="/detail-pengajuan" component={OrderDetail} />
+      <Route exact path="/dashboard-admin" component={HomeAdmin} />
     </Switch>
   );
 }
