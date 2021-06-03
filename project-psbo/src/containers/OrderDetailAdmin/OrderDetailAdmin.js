@@ -1,10 +1,9 @@
 import { Box, makeStyles, Typography, Card, CardContent, Divider, Grid } from "@material-ui/core";
-import TemplateNavigationAdmin from "components/TemplateNavigationAdmin/TemplateNavigationAdmin";
+import TemplateNavigationAdmin from "components/layouts/TemplateNavigationAdmin";
 import React, {useState} from "react";
 import theme from "styles/theme";
 import BaseTable from "components/display/BaseTable";
 import { pdfjs, Document, Page } from 'react-pdf';
-import TemplateNavigationAdmin from "components/TemplateNavigationAdmin/TemplateNavigationAdmin";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const useStyles = makeStyles((theme) => ({
