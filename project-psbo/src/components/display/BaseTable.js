@@ -22,6 +22,7 @@ import MoreIcon from "@material-ui/icons/More";
 import theme from "styles/theme";
 import localization from "utils/lang/table";
 import { Button, Typography } from "@material-ui/core";
+import {Link} from "react-router-dom";
 
 const tableIcons = {
   Add: forwardRef((props, ref) => (
@@ -109,9 +110,11 @@ function BaseTable({
                 ...actions,
                 {
                   icon: () => (
+                    <Link to="/detail-pengajuan">
                     <Button variant="contained" color="primary">
                       <Typography variant="body1">Detail</Typography>
                     </Button>
+                    </Link>
                   ),
                   tooltip: "Lihat Detail",
                   isFreeAction: false,
