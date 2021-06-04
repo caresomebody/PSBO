@@ -1,4 +1,20 @@
-import { Box, makeStyles, Typography, Card, CardContent, Divider, Grid } from "@material-ui/core";
+import {
+    Avatar,
+    Box,
+    Button,
+    Card,
+    CardActionArea,
+    CardContent,
+    CardMedia,
+    Divider,
+    Grid,
+    IconButton,
+    InputBase,
+    makeStyles,
+    Paper,
+    Typography,
+    TextField,
+  } from "@material-ui/core";
 import TemplateNavigationAdmin from "components/layouts/TemplateNavigationAdmin";
 import React, {useState} from "react";
 import theme from "styles/theme";
@@ -21,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.primary.main,
       color: theme.palette.optional.contrastText,
     },
+    
   }));
   function OrderDetailAdmin() {
     const classes = useStyles();
@@ -76,6 +93,35 @@ return (
           </Document>
           <p>Page {pageNumber} of {numPages}</p>
           </Box>
+          <Typography variant="h4">Beri Tanggapan</Typography>
+            <Divider className={classes.divider} />
+
+            <div>
+        <TextField 
+          id="outlined-full-width"
+          style={{ margin: 4 }}
+          placeholder="Beri Tanggapan Disini..."
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
+         </div>
+         <div style={{ width: "100%", textAlign: "center" }}>
+      <Box display="inline" p={1} m={1}>
+      <Button variant="contained" style={{backgroundColor:"#AC0000", color :"#ffffff"}} >
+           Menolak
+    </Button>
+      </Box>
+      <Box display="inline" p={1} m={1}>
+      <Button variant="contained" style={{backgroundColor:"#005108", color :"#ffffff"}}>
+           Menyetujui
+    </Button>
+      </Box>
+    </div>
+
           </CardContent>
           </Card>
           </TemplateNavigationAdmin>

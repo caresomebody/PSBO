@@ -17,6 +17,12 @@ const theme = createMuiTheme({
     tertiary: {
       main: "#03019F",
     },
+    success: {
+      main: "#005108",
+    },
+    merah: {
+      main: "#AC0000",
+    },
     black: {
       primary: "#3D434A",
       secondary: "#515B69",

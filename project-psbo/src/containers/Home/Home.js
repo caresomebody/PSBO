@@ -169,7 +169,7 @@ function Home() {
             </Card>
           </Box>
 
-          <Box mb={3}>
+          <Box mb={3} >
             {/* Search Component */}
             <Paper component="form" className={classes.root}>
               <InputBase
