@@ -7,6 +7,7 @@ import Order from "containers/Order/Order";
 import OrderDetail from "containers/OrderDetail/OrderDetail";
 import HomeAdmin from "containers/HomeAdmin/HomeAdmin";
 import OrderDetailAdmin from "containers/OrderDetailAdmin/OrderDetailAdmin";
+import OrderForm from "containers/OrderForm/OrderForm";
 
 function RouterConfig() {
   return (
@@ -18,6 +19,7 @@ function RouterConfig() {
       <Route exact path="/detail-pengajuan" component={OrderDetail} />
       <Route exact path="/dashboard-admin" component={HomeAdmin} />
       <Route exact path="/detail-pengajuan-admin" component={OrderDetailAdmin} />
+      <Route exact path="/form-pengajuan" component={OrderForm} />
     </Switch>
   );
 }

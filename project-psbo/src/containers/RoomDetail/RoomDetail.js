@@ -8,10 +8,12 @@ import {
   makeStyles,
   Paper,
   Typography,
+  Button
 } from "@material-ui/core";
 import TemplateNavigation from "components/layouts/TemplateNavigation";
 import React from "react";
 import Classroom from "assets/landscape.png";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -100,7 +102,7 @@ function RoomDetail() {
             </Grid>
             <Grid item xs={4}>
               <Paper className={classes.card}>
-                <Box padding={3}>
+                <Box mb={2} padding={3}>
                   <Typography variant="body2">Jadwal Sudah Booking</Typography>
                   <Typography varoamt="h5">
                     <ul>
@@ -118,6 +120,13 @@ function RoomDetail() {
                   </Typography>
                 </Box>
               </Paper>
+              <Box>
+              <Link to ="/form-pengajuan">
+                <Button variant="contained" color="secondary" fullWidth>
+                    Ajukan Peminjaman
+                </Button>
+              </Link>
+              </Box>
             </Grid>
           </Grid>
         </CardContent>
