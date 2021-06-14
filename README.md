@@ -3,6 +3,9 @@ SIMARU adalah sistem peminjaman ruangan yang ada di IPB University
 
 Trello: https://trello.com/b/ykm9C6zl/mamen-family-psbo
 
+#Back-End
+https://github.com/caresomebody/SIMARU-API
+
 # Deskripsi Singkat Aplikasi
 Selama penyelenggaraan acara kepanitiaan maupun organisasi di IPB, salah satu hal yang perlu dipersiapkan adalah ruangan. Banyak jenis ruangan yang dapat dipinjam dengan berbagai macam cara peminjaman. Variasi dalam peminjaman ruangan tersebut kerap menimbulkan pertanyaan bagi panitia penyelenggara, seperti informasi terkait ketersediaan, kapasitas, waktu operasional, fasilitas serta narahubung yang harus dihubungi. Dengan adanya permasalahan yang dialami tersebut, kami memutuskan untuk membuat suatu platform terpusat mengenai informasi setiap ruangan yang ada di IPB. Informasi tersebut menyangkut hal-hal yang telah disebutkan di atas. 
 
