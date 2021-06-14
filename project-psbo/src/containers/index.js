@@ -12,6 +12,7 @@ import {
 
 import Building from "assets/building.svg";
 import { withRouter } from "react-router";
+import FormikLogin from "components/formik/FormikLogin";
 
 function Login(props) {
   const { history } = props;
@@ -44,37 +45,8 @@ function Login(props) {
                 {/* Alert Here */}
                 <Box></Box>
               </Box>
-              <Box p={2} mt={2} textAlign="right">
-                {/* Soon to be converted into login function */}
-                <Grid container spacing={3}>
-                  <Grid item xs={12}>
-                    <TextField
-                      label="Username IPB"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      label="Password"
-                      variant="outlined"
-                      type="password"
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      fullWidth
-                      onClick={() => history.push("/beranda")}
-                    >
-                      Masuk
-                    </Button>
-                  </Grid>
-                </Grid>
-
-                {/* ends here */}
+              <Box p={2} mt={2}>
+                <FormikLogin />
               </Box>
             </Box>
           </Grid>

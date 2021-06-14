@@ -2,6 +2,7 @@ import { Box, IconButton, Menu, MenuItem, Typography } from "@material-ui/core";
 import { AccountCircle } from "@material-ui/icons";
 import React from "react";
 import { Link } from "react-router-dom";
+import AuthService from "services/auth.service";
 
 function Account() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -14,7 +15,9 @@ function Account() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    AuthService.logout();
+  };
 
   return (
     <React.Fragment>
@@ -46,23 +49,13 @@ function Account() {
         onClose={handleClose}
       >
         <Box width={156}>
-          <Link to="/">
+          <Link to="/" style={{ textDecoration: "none", color: "#000000" }}>
             <MenuItem onClick={handleClose}>
               <Typography
                 style={{
                   padding: "10px",
-                }}
-                variant="h4"
-              >
-                Profile
-              </Typography>
-            </MenuItem>
-          </Link>
-          <Link to="/">
-            <MenuItem onClick={handleClose}>
-              <Typography
-                style={{
-                  padding: "10px",
+                  textDecoration: "none",
+                  color: "#000000",
                 }}
                 variant="h4"
                 onClick={handleLogout}

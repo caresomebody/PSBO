@@ -1,13 +1,5 @@
 import {
-  Avatar,
   Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Grid,
-  IconButton,
-  InputBase,
   makeStyles,
   Paper,
   Typography,

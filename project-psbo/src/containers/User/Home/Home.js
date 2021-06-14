@@ -14,83 +14,17 @@ import {
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import TemmplateNavigation from "components/layouts/TemplateNavigation";
-import React from "react";
+import React, { useEffect } from "react";
 import Classroom from "assets/audit.png";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-const roomDummy = [
-  {
-    title: "Auditorium 1",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 2",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 3",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 4",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 5",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 6",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-  {
-    title: "Auditorium 7",
-    media: Classroom,
-  },
-];
+import rooms from "utils/dummy/rooms.json";
+import AuthService from "services/auth.service";
+import { useHistory } from "react-router-dom";
+import UserService from "services/user.service";
+import DataProgress from "components/loading/DataProgress";
 
 const calendarDummy = [
   {
@@ -147,7 +81,38 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
+
+  const history = useHistory();
+  const currentUser = AuthService.getCurrentUser();
+
   const [value, onChange] = useState(new Date());
+
+  useEffect(() => {
+    fetchRooms();
+  }, []);
+
+  const [dataRooms, setDataRooms] = useState([]);
+  console.log("ini data rooms", dataRooms);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchRooms = async () => {
+    UserService.getRooms()
+      .then((response) => {
+        setDataRooms(response.data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setDataRooms(err);
+      });
+  };
+
+  console.log("ini currentuser", currentUser);
+
+  if (currentUser === undefined) {
+    history.replace("/");
+    return null;
+  }
 
   return (
     <TemmplateNavigation>
@@ -169,7 +134,7 @@ function Home() {
             </Card>
           </Box>
 
-          <Box mb={3} >
+          <Box mb={3}>
             {/* Search Component */}
             <Paper component="form" className={classes.root}>
               <InputBase
@@ -193,28 +158,39 @@ function Home() {
           </Box>
           <Box mb={3}>
             {/*  */}
-            <Grid container spacing={3}>
-              {roomDummy.map((data) => (
-                <Grid item xs={4}>
-                  <Card>
-                    <Link to="/detail-ruangan">
-                      <CardActionArea>
-                        <CardMedia
-                          className={classes.media}
-                          image={data.media}
-                          title={data.title}
-                        />
-                        <CardContent>
-                          <Typography gutterBottom variant="h5" component="h2">
-                            {data.title}
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                    </Link>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
+            {isLoading ? (
+              <DataProgress />
+            ) : (
+              <Grid container spacing={3}>
+                {dataRooms.map((data, index) => (
+                  <Grid key={index} item xs={12} sm={6} md={4}>
+                    <Card>
+                      <Link
+                        to="/detail-ruangan"
+                        style={{ textDecoration: "none", color: "#000000" }}
+                      >
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image={data.photo}
+                            title={data.namaRuangan}
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              {data.namaRuangan}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                      </Link>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            )}
             {/*  */}
           </Box>
         </Grid>
@@ -233,7 +209,7 @@ function Home() {
                     <Avatar src={data.media} className={classes.avatar} />
                     <Box>
                       <Typography variant="h5">{data.title}</Typography>
-                      <Typography variant="body">{data.time}</Typography>
+                      <Typography variant="body1">{data.time}</Typography>
                     </Box>
                   </Box>
                 ))}
