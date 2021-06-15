@@ -148,7 +148,7 @@ function RoomDetail({ match }) {
                   </Box>
                 </Paper>
                 <Box>
-                  <Link to="/form-pengajuan">
+                  <Link to={`/form-pengajuan/${dataRoom._id}`}>
                     <Button variant="contained" color="secondary" fullWidth>
                       Ajukan Peminjaman
                     </Button>
