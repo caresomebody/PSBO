@@ -112,8 +112,11 @@ Dalam pengembangan sistem Simaru, kami menggunakan metode waterfall (Air terjun)
 
 Kami menawarkan ide sebuah platform dimana mahasiswa IPB dapat melakukan peminjaman ruangan yang ada di  IPB. Pengguna dapat melihat ketersediaan ruangan pada daftar ruangan dan juga fasilitas pada ruangan secara lengkap seperti kapasitas orang, luas ruangan dan peralatan pada detail ruangan. Pengguna dapat melakukan pengajuan untuk meminjam ruangan dengan memasukan tujuan peminjaman ruangan dan juga memilih jam serta tanggal pada detail ruangan. Kemudian pengajuan itu akan masuk ke dalam daftar pending pada aplikasi penjaga ruangan sebagai admin yang nantinya pengajuan tersebut dapat disetujui oleh admin. Jika sudah diterima, maka permohonan tersebut akan masuk ke dalam list yang ada pada daftar pengajuan bahwa ruangan sudah dipesan oleh pihak yang memesan dengan rinci.
 
-### Activity Diagram
-![class diagram](https://user-images.githubusercontent.com/48080553/122062720-dcde6a00-ce19-11eb-8f51-c3fc8951cfb9.png)
+### Activity Diagram!
+[activity mencari](https://user-images.githubusercontent.com/48080553/122079774-ec64af80-ce27-11eb-8cbd-ef1c21796ee5.png)
+![activity mengajukan](https://user-images.githubusercontent.com/48080553/122079803-f4245400-ce27-11eb-810a-8dd26fcddc17.png)
+![activity melihat](https://user-images.githubusercontent.com/48080553/122079811-f686ae00-ce27-11eb-840c-9088da6d85ba.png)
+
 
 ### Class Diagram
 ![PSBO KELOMPOK-CLASS DIAGRAM](https://user-images.githubusercontent.com/60166539/121931715-2f624c80-cd6e-11eb-841f-487f05934cda.png)
