@@ -1,5 +1,7 @@
+![logo (1)](https://user-images.githubusercontent.com/48080443/122102927-2e99eb00-ce40-11eb-9841-c7fc4b9647df.png)
 # SIMARU (Sistem Management Peminjaman Ruangan)
 SIMARU adalah sistem peminjaman ruangan yang ada di IPB University
+
 
 - Trello: https://trello.com/b/ykm9C6zl/mamen-family-psbo
 - Figma: https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU
