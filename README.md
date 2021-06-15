@@ -7,7 +7,9 @@ Trello: https://trello.com/b/ykm9C6zl/mamen-family-psbo
 https://github.com/caresomebody/SIMARU-API
 
 # Deskripsi Singkat Aplikasi
-Selama penyelenggaraan acara kepanitiaan maupun organisasi di IPB, salah satu hal yang perlu dipersiapkan adalah ruangan. Banyak jenis ruangan yang dapat dipinjam dengan berbagai macam cara peminjaman. Variasi dalam peminjaman ruangan tersebut kerap menimbulkan pertanyaan bagi panitia penyelenggara, seperti informasi terkait ketersediaan, kapasitas, waktu operasional, fasilitas serta narahubung yang harus dihubungi. Dengan adanya permasalahan yang dialami tersebut, kami memutuskan untuk membuat suatu platform terpusat mengenai informasi setiap ruangan yang ada di IPB. Informasi tersebut menyangkut hal-hal yang telah disebutkan di atas. 
+Selama penyelenggaraan acara kepanitiaan maupun organisasi di IPB, salah satu hal yang perlu dipersiapkan adalah ruangan. Banyak jenis ruangan yang dapat dipinjam dengan berbagai macam cara peminjaman. Variasi dalam peminjaman ruangan tersebut kerap menimbulkan pertanyaan bagi panitia penyelenggara, seperti informasi terkait ketersediaan, kapasitas, waktu operasional, fasilitas serta narahubung yang harus dihubungi. Dengan adanya permasalahan yang dialami tersebut, kami memutuskan untuk membuat suatu platform terpusat mengenai informasi setiap ruangan yang ada di IPB. Platform tersebut bernama SIMARU.
+
+SIMARU ( Sistem Management Peminjaman Ruang ) merupakan platform berbasis website yang diperuntukkan untuk mahasiswa IPB dalam melakukan pencarian informasi dan pengajuan peminjaman dari data ruangan yang tersedia. Fitur yang disediakan oleh Simaru berupa Data Ruangan, Ajukan Peminjaman, Data Peminjaman, dan Pengajuan. Dengan adanya platform informasi ini, tentunya akan membuat alur peminjaman setiap ruangan menjadi lebih terstruktur, informasi jadwal booking setiap ruangan akan lebih terpusat, dan proses peminjaman dapat dilakukan dengan lebih efektif dan efisien.
 
 # User Analysis
 ### User Story
@@ -122,6 +124,15 @@ Kami menawarkan ide sebuah platform dimana mahasiswa IPB dapat melakukan peminja
 ### Arsitektur Sistem
 
 ### Fungsi Utama yang Dikembangkan
+Fitur-fitur aplikasi Simaru antara lain :
+- Data Ruangan
+Pada fitur “Data Ruangan” pengguna dapat melihat daftar ruangan yang ada di IPB lengkap dengan informasi detail yang meliputi foto ruangan, deskripsi, kapasitas, ukuran, waktu operasional, fasilitas yang tersedia,  dan narahubung dari ruangan tersebut.
+- Ajukan Peminjaman
+Fitur “Ajukan Peminjaman” dapat digunakan pengguna apabila ingin mengajukan peminjaman ruangan. Pada fitur ini pengguna diwajibkan untuk mengisikan form pengajuan yang tersedia.
+- Data Peminjaman
+Fitur “Data Peminjaman” berisikan informasi realtime ruangan yang sudah terbooking. Fitur ini membantu pengguna untuk menyesuaikan pengajuan berdasarkan ruangan dan waktu peminjaman yang akan ia ajukan.
+- Pengajuan
+Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia buat lengkap dengan status dari pengajuan tersebut.
 
 ### Fungsi CRUD
 
