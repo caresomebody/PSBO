@@ -1,8 +1,11 @@
 import { Box, makeStyles, Paper, Typography } from "@material-ui/core";
 import BaseTable from "components/display/BaseTable";
 import TemplateNavigation from "components/layouts/TemplateNavigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router";
+import UserService from "services/user.service";
 import theme from "styles/theme";
+import changeDateFormat from "utils/helpers/dateFormat";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -15,18 +18,61 @@ const useStyles = makeStyles((theme) => ({
 function Order() {
   const classes = useStyles();
 
-  const dataTable = [
-    {
-      title: "Surat Peminjaman Audit CCR",
-      date: "Senin, 12 Maret 2021 - 12.06.36",
-      status: "Belum ada tindakan",
-    },
-    {
-      title: "Surat Peminjaman Audit Toyib",
-      date: "Senin, 12 Maret 2021 - 12.06.36",
-      status: "Ditolak",
-    },
-  ];
+  const history = useHistory();
+
+  useEffect(() => {
+    fetchOrders();
+  }, []);
+
+  const [dataOrders, setDataOrders] = useState([]);
+
+  const fetchOrders = async () => {
+    let fetchData = [];
+    UserService.getOrder()
+      .then((response) => {
+        const { order } = response.data;
+        console.log(order);
+        fetchData = order.map((data) => ({
+          _id: data._id,
+          user: data.user,
+          roomId: data.ruangan?._id,
+          roomName: data.ruangan?.namaRuangan,
+          dokumen: data.dokumen,
+          deskripsiPengajuan: data.deskripsiPengajuan,
+          tanggalMulai: data.tanggalMulai,
+          tanggalSelesai: data.tanggalSelesai,
+          waktuMulai: data.waktuMulai,
+          waktuSelesai: data.waktuSelesai,
+          namaAdmin: data.namaAdmin,
+          tglUpload: data.tglUpload,
+          status: data.status,
+        }));
+        console.log("fetchData", fetchData);
+        setDataOrders(fetchData);
+      })
+      .catch((err) => {
+        console.log(err);
+        setDataOrders(err);
+      });
+  };
+
+  const handleOpenDetail = (event, rowData) => {
+    console.log(rowData);
+    history.push(`/detail-pengajuan/${rowData._id}`);
+  };
+
+  const handleDelete = (_oldData) => {
+    const id = _oldData._id;
+    console.log("ini pengajuanID", id);
+    UserService.deleteOrder(id)
+      .then((response) => {
+        console.log(response);
+        history.go(0);
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  };
 
   return (
     <TemplateNavigation>
@@ -44,31 +90,24 @@ function Order() {
       <Paper>
         <BaseTable
           title="Data Pengajuan"
-          data={dataTable}
+          data={dataOrders}
           columns={[
             {
-              title: "Judul",
-              field: "title",
+              title: "Ruangan",
+              field: "roomName",
             },
             {
               title: "Tanggal Upload",
-              field: "date",
+              field: "tglUpload",
+              render: (rowData) => (
+                <div>{changeDateFormat(rowData.tglUpload, "LLL")}</div>
+              ),
             },
             {
               title: "Status Pengajuan",
               field: "status",
               render: (rowData) =>
-                rowData.status === "Belum ada tindakan" ? (
-                  <Box
-                    bgcolor="#606060"
-                    borderRadius="4px"
-                    color={theme.palette.optional.contrastText}
-                    padding={1}
-                    textAlign="center"
-                  >
-                    <Typography variant="h5">{rowData.status}</Typography>
-                  </Box>
-                ) : rowData.status === "Ditolak" ? (
+                rowData.status === 0 ? (
                   <Box
                     bgcolor="#AC0000"
                     borderRadius="4px"
@@ -76,14 +115,35 @@ function Order() {
                     padding={1}
                     textAlign="center"
                   >
-                    <Typography variant="h5">{rowData.status}</Typography>
+                    <Typography variant="h5">Ditolak</Typography>
+                  </Box>
+                ) : rowData.status === 1 ? (
+                  <Box
+                    bgcolor="#606060"
+                    borderRadius="4px"
+                    color={theme.palette.optional.contrastText}
+                    padding={1}
+                    textAlign="center"
+                  >
+                    <Typography variant="h5">Belum ada tindakan</Typography>
+                  </Box>
+                ) : rowData.status === 2 ? (
+                  <Box
+                    bgcolor="#005108"
+                    borderRadius="4px"
+                    color={theme.palette.optional.contrastText}
+                    padding={1}
+                    textAlign="center"
+                  >
+                    <Typography variant="h5">Diterima</Typography>
                   </Box>
                 ) : (
                   ""
                 ),
             },
           ]}
-          //   handleOpenDetail={}
+          handleOpenDetail={handleOpenDetail}
+          onRowDelete={handleDelete}
           disableAdd
           disableUpdate
           disableExport

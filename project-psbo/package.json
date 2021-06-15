@@ -17,6 +17,7 @@
     "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
     "material-table": "^1.69.3",
+    "moment": "^2.29.1",
     "pdfjs-dist": "^2.8.335",
     "react": "^17.0.2",
     "react-axios": "^2.0.5",

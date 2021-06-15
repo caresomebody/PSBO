@@ -17,7 +17,7 @@ function RouterConfig() {
       <Route exact path="/beranda" component={Home} />
       <Route exact path="/detail-ruangan/:id" component={RoomDetail} />
       <Route exact path="/pengajuan" component={Order} />
-      <Route exact path="/detail-pengajuan" component={OrderDetail} />
+      <Route exact path="/detail-pengajuan/:id" component={OrderDetail} />
       <Route exact path="/form-pengajuan/:id" component={OrderForm} />
 
       <Route exact path="/admin/beranda" component={HomeAdmin} />
