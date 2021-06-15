@@ -12,9 +12,10 @@ import {
 } from "@material-ui/core";
 import TemplateNavigation from "components/layouts/TemplateNavigation";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import UserService from "services/user.service";
 import DataProgress from "components/loading/DataProgress";
+import authService from "services/auth.service";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,8 +35,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function RoomDetail({ match }) {
-  console.log(match);
   const classes = useStyles();
+  const currentUser = authService.getCurrentUser();
+  const history = useHistory();
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -58,6 +60,11 @@ function RoomDetail({ match }) {
 
   const [dataRoom, setDataRoom] = useState({});
   console.log("ini dataroom", dataRoom);
+
+  if (currentUser === undefined || currentUser.role !== 1) {
+    history.replace("/");
+    return null;
+  }
 
   return (
     <TemplateNavigation>

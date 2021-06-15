@@ -10,7 +10,7 @@ const login = (values) => {
       if (token) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
-      console.log('ini response',response.data)
+      console.log("ini response", response.data);
       return response.data;
     });
 };

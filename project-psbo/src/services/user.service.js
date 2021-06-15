@@ -21,6 +21,11 @@ const getOrderById = (id) => {
   return axios.get(url, { headers: authHeader() });
 };
 
+const getAdmin = () => {
+  const url = `${process.env.REACT_APP_BASEURL}/api/admin`;
+  return axios.get(url, { headers: authHeader() });
+};
+
 const postOrder = (values) => {
   const url = `${process.env.REACT_APP_BASEURL}/api/pengajuan/store`;
   return axios.post(url, values, { headers: authHeader() });
@@ -36,6 +41,7 @@ export default {
   getRoomById,
   getOrder,
   getOrderById,
+  getAdmin,
   postOrder,
   deleteOrder,
 };

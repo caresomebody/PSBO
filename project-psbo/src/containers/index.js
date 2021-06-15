@@ -1,21 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
-import {
-  Box,
-  Button,
-  Grid,
-  Hidden,
-  TextField,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
+import { Box, Grid, Hidden, Toolbar, Typography } from "@material-ui/core";
 
 import Building from "assets/building.svg";
 import { withRouter } from "react-router";
 import FormikLogin from "components/formik/FormikLogin";
+import BaseAlert from "components/lab/BaseAlert";
 
 function Login(props) {
-  const { history } = props;
+  const [alertStatus, setAlertStatus] = useState({});
+  console.log("ini alertstatus", alertStatus);
   return (
     <div>
       <Box bgcolor="F0F0F0" minHeight="100vh">
@@ -43,10 +37,12 @@ function Login(props) {
               </Box>
               <Box marginY={3} marginX={3} align="center">
                 {/* Alert Here */}
-                <Box></Box>
+                <Box>
+                  <BaseAlert status={alertStatus} />
+                </Box>
               </Box>
               <Box p={2} mt={2}>
-                <FormikLogin />
+                <FormikLogin setAlertStatus={setAlertStatus} />
               </Box>
             </Box>
           </Grid>

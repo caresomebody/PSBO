@@ -1,6 +1,7 @@
 import { Box, Grid, makeStyles } from "@material-ui/core";
 import { Form, Formik } from "formik";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import userService from "services/user.service";
 import UserService from "services/user.service";
 import * as Yup from "yup";
 import FormikButton from "./FormikButton";
@@ -33,9 +34,8 @@ function FormikOrderForm(props) {
   const { id, setAlertStatus } = props;
   const classes = useStyles();
 
-  console.log("in id", id.id);
-
-  const ruanganID = id.id;
+  const ruanganID = id;
+  console.log("in ruanganID", ruanganID);
 
   const initialValues = {
     dokumen: "",
@@ -57,20 +57,23 @@ function FormikOrderForm(props) {
     namaAdmin: Yup.string().required("Wajib diisi"),
   });
 
-  const dataAdmin = [
-    {
-      _id: "123",
-      name: "Sukijan",
-    },
-    {
-      _id: "124",
-      name: "Sukijan1",
-    },
-    {
-      _id: "125",
-      name: "Sukijan2",
-    },
-  ];
+  useEffect(() => {
+    fetchAdmin();
+  }, []);
+
+  const [dataAdmin, setDataAdmin] = useState([]);
+
+  const fetchAdmin = () => {
+    let getAdmin = [];
+    userService.getAdmin().then((response) => {
+      const { listAdmin } = response.data;
+      getAdmin = listAdmin.map((data) => ({
+        _id: data._id,
+        name: data.nama,
+      }));
+      setDataAdmin(getAdmin);
+    });
+  };
 
   const dataInputs = [
     {
@@ -120,6 +123,7 @@ function FormikOrderForm(props) {
 
   const handleAddData = async (values, onSubmitProps) => {
     const newValues = { ruanganID, ...values };
+    console.log("ini newvalues", newValues);
     UserService.postOrder(newValues)
       .then((response) => {
         console.log(response.data);
@@ -128,8 +132,8 @@ function FormikOrderForm(props) {
           message: "Ruangan berhasil dipesan",
         });
       })
-      .catch((error) => {
-        console.log(error.response);
+      .catch((err) => {
+        console.log(err.response);
         setAlertStatus({
           severity: "error",
           message: "Ruangan gagal dipesan",

@@ -108,7 +108,7 @@ function Home() {
 
   console.log("ini currentuser", currentUser);
 
-  if (currentUser === undefined) {
+  if (currentUser === undefined || currentUser.role !== 1) {
     history.replace("/");
     return null;
   }

@@ -3,6 +3,7 @@ import BaseTable from "components/display/BaseTable";
 import TemplateNavigation from "components/layouts/TemplateNavigation";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
+import authService from "services/auth.service";
 import UserService from "services/user.service";
 import theme from "styles/theme";
 import changeDateFormat from "utils/helpers/dateFormat";
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Order() {
   const classes = useStyles();
-
+  const currentUser = authService.getCurrentUser();
   const history = useHistory();
 
   useEffect(() => {
@@ -73,6 +74,11 @@ function Order() {
         console.log(error.response);
       });
   };
+
+  if (currentUser === undefined || currentUser.role !== 1) {
+    history.replace("/");
+    return null;
+  }
 
   return (
     <TemplateNavigation>

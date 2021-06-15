@@ -15,6 +15,8 @@ import { pdfjs, Document, Page } from "react-pdf";
 import UserService from "services/user.service";
 import changeDateFormat from "utils/helpers/dateFormat";
 import DataProgress from "components/loading/DataProgress";
+import authService from "services/auth.service";
+import { useHistory } from "react-router";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const useStyles = makeStyles((theme) => ({
@@ -36,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
 
 function OrderDetail({ match }) {
   const classes = useStyles();
+  const currentUser = authService.getCurrentUser();
+  const history = useHistory();
 
   const [isLoading, setisLoading] = useState(true);
 
@@ -92,6 +96,11 @@ function OrderDetail({ match }) {
       response: dataOrder.tanggapan,
     },
   ];
+
+  if (currentUser === undefined || currentUser.role !== 1) {
+    history.replace("/");
+    return null;
+  }
 
   return (
     <TemplateNavigation>
