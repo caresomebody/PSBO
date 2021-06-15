@@ -23,7 +23,7 @@ SIMARU ( Sistem Management Peminjaman Ruang ) merupakan platform berbasis websit
 
 # Spesifikasi Teknis Lingkungan Pengembangan
 ### Software
-Visual Studio Code, Github, Github Desktop, Insomnia, Figma, Chrome, Trello
+Visual Studio Code, Github, Github Desktop, Postman, Figma, Chrome, Microsoft Edge, Trello
 
 ### Hardware
 - Processors  : AMD Ryzen 5 3600, Intel Core i5-8250U 1.60 GHz
