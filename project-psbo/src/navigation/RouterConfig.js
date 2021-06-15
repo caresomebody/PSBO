@@ -15,14 +15,13 @@ function RouterConfig() {
     <Switch>
       <Route exact path="/" component={Login} />
       <Route exact path="/beranda" component={Home} />
-      <Route exact path="/detail-ruangan" component={RoomDetail} />
+      <Route exact path="/detail-ruangan/:id" component={RoomDetail} />
       <Route exact path="/pengajuan" component={Order} />
       <Route exact path="/detail-pengajuan" component={OrderDetail} />
       <Route exact path="/form-pengajuan" component={OrderForm} />
 
       <Route exact path="/admin/beranda" component={HomeAdmin} />
       <Route exact path="/admin/detail-pengajuan" component={OrderDetailAdmin} />
-
     </Switch>
   );
 }

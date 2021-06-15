@@ -20,7 +20,6 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import rooms from "utils/dummy/rooms.json";
 import AuthService from "services/auth.service";
 import { useHistory } from "react-router-dom";
 import UserService from "services/user.service";
@@ -162,11 +161,11 @@ function Home() {
               <DataProgress />
             ) : (
               <Grid container spacing={3}>
-                {dataRooms.map((data, index) => (
-                  <Grid key={index} item xs={12} sm={6} md={4}>
+                {dataRooms.map((data) => (
+                  <Grid key={data._id} item xs={12} sm={6} md={4}>
                     <Card>
                       <Link
-                        to="/detail-ruangan"
+                        to={`/detail-ruangan/${data._id}`}
                         style={{ textDecoration: "none", color: "#000000" }}
                       >
                         <CardActionArea>

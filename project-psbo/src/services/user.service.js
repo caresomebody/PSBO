@@ -6,6 +6,12 @@ const getRooms = () => {
   return axios.get(url, { headers: authHeader() });
 };
 
+const getRoomById = (id) => {
+  const url = `${process.env.REACT_APP_BASEURL}/api/ruangan/${id}`;
+  return axios.get(url, { headers: authHeader() });
+};
+
 export default {
   getRooms,
+  getRoomById,
 };

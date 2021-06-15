@@ -22,7 +22,13 @@ function FormikLogin(...props) {
 
   const handeLogin = async (values, onSubmitProps) => {
     AuthService.login(values).then(() => {
-      history.push("/beranda");
+      const user = AuthService.getCurrentUser();
+      if (user != null) {
+        const { token } = AuthService.getCurrentUser();
+        if (token != null) {
+          history.push("/beranda");
+        }
+      }
     });
     onSubmitProps.setSubmitting(false);
   };
