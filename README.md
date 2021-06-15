@@ -4,15 +4,15 @@ SIMARU adalah sistem peminjaman ruangan yang ada di IPB University
 - Trello: https://trello.com/b/ykm9C6zl/mamen-family-psbo
 - Figma: https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU
 
-[Back-End](#back-end) | [Deskripsi](#deskripsi) | [User Analysis](#user-analysis) | [Spesifikasi](#spesifikasi) | [Konsep OOP](#konsep-oop) | [Tipe Desain](#tipe-desain) | [Hasil dan Pembahasan](#hasil-dan-pembahasan) | [Implementasi](#implementasi) | [Saran](#saran) | [Job Desc](#job-desc)
+[Back-End](#back-end) | [Deskripsi](#deskripsi-singkat-aplikasi) | [User Analysis](#user-analysis) | [Spesifikasi](#spesifikasi-teknis-lingkungan-pengembangan) | [Konsep OOP](#konsep-oop-yang-digunakan) | [Tipe Desain](#tipe-desain-pengembangan-yang-digunakan) | [Hasil dan Pembahasan](#hasil-dan-pembahasan) | [Implementasi](#hasil-implementasi) | [Saran](#saran-untuk-pengembangan-selanjutnya) | [Job Desc](#developer-dan-job-desc)
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 
 # Back-End
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 https://github.com/caresomebody/SIMARU-API
 
 # Deskripsi Singkat Aplikasi
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 Selama penyelenggaraan acara kepanitiaan maupun organisasi di IPB, salah satu hal yang perlu dipersiapkan adalah ruangan. Banyak jenis ruangan yang dapat dipinjam dengan berbagai macam cara peminjaman. Variasi dalam peminjaman ruangan tersebut kerap menimbulkan pertanyaan bagi panitia penyelenggara, seperti informasi terkait ketersediaan, kapasitas, waktu operasional, fasilitas serta narahubung yang harus dihubungi. Dengan adanya permasalahan yang dialami tersebut, kami memutuskan untuk membuat suatu platform terpusat mengenai informasi setiap ruangan yang ada di IPB. Platform tersebut bernama SIMARU.
 
 SIMARU ( Sistem Management Peminjaman Ruang ) merupakan platform berbasis website yang diperuntukkan untuk mahasiswa IPB dalam melakukan pencarian informasi dan pengajuan peminjaman dari data ruangan yang tersedia. Fitur yang disediakan oleh Simaru berupa Data Ruangan, Ajukan Peminjaman, Data Peminjaman, dan Pengajuan. Dengan adanya platform informasi ini, tentunya akan membuat alur peminjaman setiap ruangan menjadi lebih terstruktur, informasi jadwal booking setiap ruangan akan lebih terpusat, dan proses peminjaman dapat dilakukan dengan lebih efektif dan efisien.
@@ -29,7 +29,7 @@ SIMARU ( Sistem Management Peminjaman Ruang ) merupakan platform berbasis websit
 “Sebagai panitia sebuah acara di ipb saya ingin tahu narahubung dari setiap ruangan yang ada di IPB, agar saya dapat lebih mudah dalam menghubungi pihak ruangan yang ingin saya sewa nantinya”
 
 # Spesifikasi Teknis Lingkungan Pengembangan
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 ### Software
 ![Frame 1](https://user-images.githubusercontent.com/60166539/122099522-496a6080-ce3c-11eb-9109-1c7d38699a94.png)
 Visual Studio Code, Github, Github Desktop, Postman, Figma, Chrome, Microsoft Edge, Trello
@@ -74,7 +74,7 @@ MERN adalah singkatan dari MongoDB, Express, React, Node yang merupakan tech sta
 MERN adalah salah satu dari beberapa variasi stack MEAN (MongoDB, Express, Angular, Node), di mana Angular sebagai framework front-end tradisional digantikan dengan React.js. Variasi lainnya adalah MEVN (MongoDB, Express, Vue, Node) dan framework front end dengan bahasa pemrograman JavaScript apapun dapat digunakan.
 
 # Konsep OOP yang Digunakan
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 - Object, Method dan Property
     - Object adalah kesatuan dasar dari OOP dan merepresentasikan bentuk nyata dari class.
     - Method atau behavior adalah suatu operasi berupa fungsi-fungsi yang dapat dilakukan oleh suatu object. Method didefinisikan pada class akan tetapi dipanggil melalui object. Metode menentukan perilaku object, yakni apa yang terjadi ketika object tersebut dibuat serta berbagai operasi yang dapat dilakukan object.
@@ -96,7 +96,7 @@ MERN adalah salah satu dari beberapa variasi stack MEAN (MongoDB, Express, Angul
    - Metode untuk mengirim pesan dari sebuah objek dari satu bagian ke bagian lainnya (contoh produsen dan konsumen). Metode ini digunakan ketika bagian tersebut tidak memiliki ruang penyimpanan atau perangkat keras yang dapat dibagi sebagai cara untuk berkomunikasi.
 
 # Tipe Desain Pengembangan yang Digunakan
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 Dalam pengembangan sistem Simaru, kami menggunakan metode waterfall (Air terjun). Metode ini menggambarkan pendekatan yang cukup sistematis juga berurutan pada pengembangan software. Tahapan yang dilakukan terdiri dari Requirement, Design System, Coding, Integration dan Operation, serta Maintenance. Berikut merupakan uraian dari tahapan yang kami lakukan :
 
 <table>
@@ -137,7 +137,7 @@ Dalam pengembangan sistem Simaru, kami menggunakan metode waterfall (Air terjun)
 </table>
 
 # Hasil dan Pembahasan
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 ### Use Case Diagram
 ![USE CASE DIAGRAM](https://user-images.githubusercontent.com/60166539/121931675-1f4a6d00-cd6e-11eb-877f-faceee4b0914.png)
 
@@ -186,16 +186,15 @@ Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia
 - Pengguna dapat menghapus pengajuan yang telah ia buat sebelumnya
 
 # Hasil Implementasi
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 ### Screenshot sistem
 ### Link Aplikasi
 
 
-### Saran untuk Pengembangan Selanjutnya
-[`^ kembali ke atas ^`](#)
-
+# Saran untuk Pengembangan Selanjutnya
+[`^ kembali ke atas ^`](#)  
 # Developer dan Job Desc
-[`^ kembali ke atas ^`](#)
+[`^ kembali ke atas ^`](#)  
 <table>
     <thead>
         <tr>
