@@ -177,7 +177,7 @@ Figma: https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU
             <td>1</td>
             <td>Zahwa Wahyu Riana</td>
             <td>G64180070</td>
-            <td>Front-End & Back-End</td>
+            <td>Front-End & System Analyst</td>
         </tr>
         <tr>
             <td>2</td>
@@ -201,7 +201,7 @@ Figma: https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU
             <td>5</td>
             <td>Muhammad Hafizhan</td>
             <td>G64180100</td>
-            <td>Front-End</td>
+            <td>System Analyst & UI/UX Designer</td>
         </tr>
 </tbody>
 </table>
