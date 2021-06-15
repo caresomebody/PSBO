@@ -31,6 +31,11 @@ const postOrder = (values) => {
   return axios.post(url, values, { headers: authHeader() });
 };
 
+const putOrder = (values, id) => {
+  const url = `${process.env.REACT_APP_BASEURL}/api/pengajuan/update/${id}`;
+  return axios.post(url, values, { headers: authHeader() });
+};
+
 const deleteOrder = (id) => {
   const url = `${process.env.REACT_APP_BASEURL}/api/pengajuan/delete/${id}`;
   return axios.delete(url, { headers: authHeader() });
@@ -43,5 +48,6 @@ export default {
   getOrderById,
   getAdmin,
   postOrder,
+  putOrder,
   deleteOrder,
 };

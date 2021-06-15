@@ -103,7 +103,7 @@ function TemplateNavigationAdmin(props) {
     {
       text: "Beranda",
       icon: <Home />,
-      onClick: () => history.push("/beranda"),
+      onClick: () => history.push("/admin/beranda"),
     },
   ];
 

@@ -21,7 +21,7 @@ function RouterConfig() {
       <Route exact path="/form-pengajuan/:id" component={OrderForm} />
 
       <Route exact path="/admin/beranda" component={HomeAdmin} />
-      <Route exact path="/admin/detail-pengajuan" component={OrderDetailAdmin} />
+      <Route exact path="/admin/detail-pengajuan/:id" component={OrderDetailAdmin} />
     </Switch>
   );
 }

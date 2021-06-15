@@ -134,12 +134,13 @@ function OrderDetail({ match }) {
                     </Typography>
                   </Box>
                   <Box mb={2}>
-                    <Typography variant="body1">Himalkom IPB</Typography>
+                    <Typography variant="body1">
+                      {dataOrder.userName}
+                    </Typography>
                   </Box>
                   <Box mb={2}>
                     <Typography variant="body1">
-                      Assalamualaikum Wr Wb dengan ini kami lampirkan surat
-                      peminjaman audit CCR{" "}
+                      {dataOrder.deskripsiPengajuan}
                     </Typography>
                   </Box>
                 </Grid>
