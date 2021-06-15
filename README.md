@@ -2,6 +2,7 @@
 SIMARU adalah sistem peminjaman ruangan yang ada di IPB University
 
 Trello: https://trello.com/b/ykm9C6zl/mamen-family-psbo
+Figma: https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU
 
 # Back-End
 https://github.com/caresomebody/SIMARU-API
@@ -65,6 +66,25 @@ MERN adalah singkatan dari MongoDB, Express, React, Node yang merupakan tech sta
 MERN adalah salah satu dari beberapa variasi stack MEAN (MongoDB, Express, Angular, Node), di mana Angular sebagai framework front-end tradisional digantikan dengan React.js. Variasi lainnya adalah MEVN (MongoDB, Express, Vue, Node) dan framework front end dengan bahasa pemrograman JavaScript apapun dapat digunakan.
 
 # Konsep OOP yang Digunakan
+- Object, Method dan Property
+    - Object adalah kesatuan dasar dari OOP dan merepresentasikan bentuk nyata dari class.
+    - Method atau behavior adalah suatu operasi berupa fungsi-fungsi yang dapat dilakukan oleh suatu object. Method didefinisikan pada class akan tetapi dipanggil melalui object. Metode menentukan perilaku object, yakni apa yang terjadi ketika object tersebut dibuat serta berbagai operasi yang dapat dilakukan object.
+    - Property adalah bagian dari sebuah class yang mendeskripsikan sifat yang dimiliki oleh class tersebut. 
+
+- Class 
+    - Cetak biru (blueprint) definisi pengguna atau prototipe dari object yang dibuat. Class yang telah diciptakan tersebut merepresentasikan seperangkat properti atau method yang umum dari semua object dari satu tipe data.
+
+- Encapsulation
+   - Metode penyatuan data atau metode yang berbeda yang “dikapsulkan” menjadi satu unit data. Encapsulation juga dapat diartikan sebagai salah satu cara untuk melindungi data agar tidak dapat diakses oleh apapun yang berada diluar kapsul.
+
+- Inheritance
+   - Konsep yang memungkinkan class yang telah terbentuk untuk mewariskan sifat-sifatnya (field dan method) kepada class yang baru dibuat. 
+
+- Getter and Setter
+   - Metode untuk mengambil dan memperbarui nilai dari sebuah variabel, terutama pada variabel yang terdapat pada enkapsulasi. 
+
+- Message Passing
+   - Metode untuk mengirim pesan dari sebuah objek dari satu bagian ke bagian lainnya (contoh produsen dan konsumen). Metode ini digunakan ketika bagian tersebut tidak memiliki ruang penyimpanan atau perangkat keras yang dapat dibagi sebagai cara untuk berkomunikasi.
 
 # Tipe Desain Pengembangan yang Digunakan
 Dalam pengembangan sistem Simaru, kami menggunakan metode waterfall (Air terjun). Metode ini menggambarkan pendekatan yang cukup sistematis juga berurutan pada pengembangan software. Tahapan yang dilakukan terdiri dari Requirement, Design System, Coding, Integration dan Operation, serta Maintenance. Berikut merupakan uraian dari tahapan yang kami lakukan :
@@ -157,7 +177,7 @@ Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia
 # Hasil Implementasi
 ### Screenshot sistem
 ### Link Aplikasi
-Figma: https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU
+
 
 ### Saran untuk Pengembangan Selanjutnya
 
