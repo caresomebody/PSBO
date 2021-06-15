@@ -65,6 +65,44 @@ MERN adalah salah satu dari beberapa variasi stack MEAN (MongoDB, Express, Angul
 # Konsep OOP yang Digunakan
 
 # Tipe Desain Pengembangan yang Digunakan
+Dalam pengembangan sistem Simaru, kami menggunakan metode waterfall (Air terjun). Metode ini menggambarkan pendekatan yang cukup sistematis juga berurutan pada pengembangan software. Tahapan yang dilakukan terdiri dari Requirement, Design System, Coding, Integration dan Operation, serta Maintenance. Berikut merupakan uraian dari tahapan yang kami lakukan :
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Tahapan</th>
+             <th>Uraian</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Requirement Analysis</td>
+            <td>Pada tahapan ini dilakukan untuk mengetahui kebutuhan pengguna atas perangkat lunak yang diharapkan. Informasi kebutuhan tersebut bisa diperoleh dengan cara wawancara langsung, diskusi, dan studi literatur. Kemudian, hasil dari informasi tersebut akan dianalisis dan dikelompokkan berdasarkan kebutuhan pengguna</td>
+        </tr>
+         <tr>
+            <td>2.</td>
+            <td>Design System</td>
+            <td>Pada tahap ini akan dibuat software requirement dimulai dari perancangan perangkat lunak, pembuatan ERD, Use case diagram, Activity diagram, Class diagram, Arsitektur sistem, serta representasi interface</td>
+        </tr>
+         <tr>
+            <td>3.</td>
+            <td>Coding & System</td>
+            <td>Tahapan ini merupakan implementasi dari perancangan yang dibuat. Sistem informasi akan dibuat menggunakan bahasa pemrograman JavaScript dengan Framework React JS. Setelah itu akan dilakukan testing terhadap sistem yang telah dibuat untuk mengetahui kesalahan dari sistem tersebut dan dilakukan perbaikan</td>
+        </tr>
+         <tr>
+            <td>4.</td>
+            <td>Integration</td>
+            <td>Tahap ini merupakan tahapan final. Setelah melakukan tiga tahapan di atas, maka sistem telah siap untuk digunakan oleh user</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Operation & Maintenance</td>
+            <td>Pemeliharaan akan dilakukan apabila terdapat update fitur atau memperbaiki kesalahan yang ditemukan pada saat sistem digunakan langsung oleh user</td>
+        </tr>
+</tbody>
+</table>
 
 # Hasil dan Pembahasan
 ### Use Case Diagram
