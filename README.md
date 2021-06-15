@@ -139,6 +139,16 @@ Fitur “Data Peminjaman” berisikan informasi realtime ruangan yang sudah terb
 Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia buat lengkap dengan status dari pengajuan tersebut.
 
 ### Fungsi CRUD
+1. CREATE
+- Pengguna dapat membuat pengajuan permintaan untuk booking ruangan dengan atribut Id pengajuan, dokumen, deskripsi, tanggal mulai, tanggal selesai, waktu mulai, waktu selesai.
+2. READ
+- Pengguna dapat melihat daftar ketersediaan ruangan yang terdapat pada homepage
+- Pengguna dapat melihat data detail ruangan IPB
+- Pengguna dapat melihat detail pengajuan dari pengajuan yang telah ia buat
+3. UPDATE
+- Pengguna dapat mengupdate pengajuan yang telah ia ajukan sebelumnya selama admin belum menanggapi pengajuan tersebut
+4. DELETE
+- Pengguna dapat menghapus pengajuan yang telah ia buat sebelumnya
 
 # Hasil Implementasi
 ### Screenshot sistem
