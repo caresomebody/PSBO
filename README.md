@@ -122,6 +122,7 @@ Kami menawarkan ide sebuah platform dimana mahasiswa IPB dapat melakukan peminja
 ![ERD REVISED-ERD REVISED](https://user-images.githubusercontent.com/60166539/121931754-39844b00-cd6e-11eb-8cd1-e99e4135abb9.png)
 
 ### Arsitektur Sistem
+![Frame 874](https://user-images.githubusercontent.com/48080553/122075815-8cb8d500-ce24-11eb-8f41-13821fa11cb3.png)
 
 ### Fungsi Utama yang Dikembangkan
 Fitur-fitur aplikasi Simaru antara lain :
