@@ -126,12 +126,16 @@ Kami menawarkan ide sebuah platform dimana mahasiswa IPB dapat melakukan peminja
 ### Fungsi Utama yang Dikembangkan
 Fitur-fitur aplikasi Simaru antara lain :
 - Data Ruangan
+
 Pada fitur “Data Ruangan” pengguna dapat melihat daftar ruangan yang ada di IPB lengkap dengan informasi detail yang meliputi foto ruangan, deskripsi, kapasitas, ukuran, waktu operasional, fasilitas yang tersedia,  dan narahubung dari ruangan tersebut.
 - Ajukan Peminjaman
+
 Fitur “Ajukan Peminjaman” dapat digunakan pengguna apabila ingin mengajukan peminjaman ruangan. Pada fitur ini pengguna diwajibkan untuk mengisikan form pengajuan yang tersedia.
 - Data Peminjaman
+
 Fitur “Data Peminjaman” berisikan informasi realtime ruangan yang sudah terbooking. Fitur ini membantu pengguna untuk menyesuaikan pengajuan berdasarkan ruangan dan waktu peminjaman yang akan ia ajukan.
 - Pengajuan
+
 Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia buat lengkap dengan status dari pengajuan tersebut.
 
 ### Fungsi CRUD
