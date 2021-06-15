@@ -3,12 +3,14 @@
 SIMARU adalah sistem peminjaman ruangan yang ada di IPB University
 
 <h1 align="center">
+	<a href="https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU">
 	<img
-		src="https://user-images.githubusercontent.com/48080443/122107501-563f8200-ce45-11eb-8001-b31a9729faad.png"
-         href="https://www.figma.com/file/UBvLP54qv5oLWKCFyiYgVp/SIMARU"/>
-    <img
-		src="https://user-images.githubusercontent.com/48080443/122107552-63f50780-ce45-11eb-8ed1-4b7051c17ed6.png"
-         href="https://trello.com/b/ykm9C6zl/mamen-family-psbo"/> 
+	src="https://user-images.githubusercontent.com/48080443/122107501-563f8200-ce45-11eb-8001-b31a9729faad.png"/>
+	</a>
+	<a href="https://trello.com/b/ykm9C6zl/mamen-family-psbo">
+    	<img
+	src="https://user-images.githubusercontent.com/48080443/122107552-63f50780-ce45-11eb-8ed1-4b7051c17ed6.png"/> 
+	</a>
 </h1>
 
 [Back-End](#back-end) | [Deskripsi](#deskripsi-singkat-aplikasi) | [User Analysis](#user-analysis) | [Spesifikasi](#spesifikasi-teknis-lingkungan-pengembangan) | [Konsep OOP](#konsep-oop-yang-digunakan) | [Tipe Desain](#tipe-desain-pengembangan-yang-digunakan) | [Hasil dan Pembahasan](#hasil-dan-pembahasan) | [Implementasi](#hasil-implementasi) | [Saran](#saran-untuk-pengembangan-selanjutnya) | [Job Desc](#developer-dan-job-desc)
@@ -244,4 +246,6 @@ Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia
         </tr>
 </tbody>
 </table>
+
+
 
