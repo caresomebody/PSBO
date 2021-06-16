@@ -143,7 +143,7 @@ function TemplateNavigationAdmin(props) {
               }}
             >
               <Typography variant="h2" noWrap>
-                Simaru
+                Simaru IPB
               </Typography>
             </Link>
             <Box

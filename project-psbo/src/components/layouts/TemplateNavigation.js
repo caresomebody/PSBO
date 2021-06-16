@@ -148,7 +148,7 @@ function TemplateNavigation(props) {
               }}
             >
               <Typography variant="h2" noWrap>
-                Simaru
+                Simaru IPB
               </Typography>
             </Link>
             <Box
@@ -156,7 +156,7 @@ function TemplateNavigation(props) {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Typography variant="h4">Peminjam Ruangan</Typography>
+              <Typography variant="h4">Penjaga Ruangan</Typography>
               <Account />
             </Box>
           </Box>
