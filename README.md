@@ -281,6 +281,7 @@ Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://simaru-ipb.herokuapp.com/)
 
 **NOTES**
+
 Karena belum terintegrasi dengan API IPB, berikut username dan password untuk mencoba aplikasi kami:
 <table>
     <thead>
