@@ -151,7 +151,7 @@ function TemplateNavigationAdmin(props) {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Typography variant="h4">Peminjam Ruangan</Typography>
+              <Typography variant="h4">Penjaga Ruangan</Typography>
               <Account />
             </Box>
           </Box>

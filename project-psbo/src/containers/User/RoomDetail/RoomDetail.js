@@ -84,7 +84,7 @@ function RoomDetail({ match }) {
               title="Ruangan"
             />
             <Grid container spacing={3}>
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <Box mb={2}>
                   <Typography variant="body2">Deskripsi Ruangan</Typography>
                   <Typography>{dataRoom.deskripsiRuangan}</Typography>
@@ -130,7 +130,7 @@ function RoomDetail({ match }) {
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classes.card}>
                   <Box mb={2} padding={3}>
                     <Typography variant="body2">
