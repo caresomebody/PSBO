@@ -116,7 +116,7 @@ MERN adalah salah satu dari beberapa variasi stack MEAN (MongoDB, Express, Angul
    - Metode untuk mengirim pesan dari sebuah objek dari satu bagian ke bagian lainnya (contoh produsen dan konsumen). Metode ini digunakan ketika bagian tersebut tidak memiliki ruang penyimpanan atau perangkat keras yang dapat dibagi sebagai cara untuk berkomunikasi.
 
 
-# 🎨 Design Pattern
+# 🎨 Architecture Pattern
 <h1 align="center">
 	<img
 	src="https://user-images.githubusercontent.com/48080443/122119348-4464db80-ce53-11eb-9d35-bcd7b9045a74.png"/>
