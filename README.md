@@ -1,4 +1,4 @@
-![logo (1)](https://user-images.githubusercontent.com/48080443/122102927-2e99eb00-ce40-11eb-9841-c7fc4b9647df.png)
+[![logo (1)](https://user-images.githubusercontent.com/48080443/122102927-2e99eb00-ce40-11eb-9841-c7fc4b9647df.png)](https://simaru-ipb.herokuapp.com/)
 
 <h1 align="center">
 	Kelompok 1 - Paralel 1 - PSBO - Mamen Family
@@ -278,6 +278,32 @@ Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia
 
 
 ### Link Aplikasi
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://simaru-ipb.herokuapp.com/)
+
+**NOTES**
+Karena belum terintegrasi dengan API IPB, berikut username dan password untuk mencoba aplikasi kami:
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+		<th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>pak_kunci</td>
+            <td>admin</td>
+		<td>Admin</td>
+        </tr>
+         <tr>
+            <td>panitia_ipb</td>
+            <td>user</td>
+		 <td>User</td>
+        </tr>
+</tbody>
+</table>
+
 
 
 # 🤟 Saran untuk Pengembangan Selanjutnya
