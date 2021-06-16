@@ -309,6 +309,10 @@ Karena belum terintegrasi dengan API IPB, berikut username dan password untuk me
 
 # 🤟 Saran untuk Pengembangan Selanjutnya
 [`^ kembali ke atas ^`](#)  
+
+Untuk pengembangan selanjutnya diharapkan bisa mengintegrasi AUTH dari SIMARU dengan API resmi dari IPB, serta dapat menampilkan data ruangan yang sesuai dengan data asli dari IPB (apabila ada)
+
+
 # 👨‍🏫 Developer dan Job Desc
 [`^ kembali ke atas ^`](#)  
 
