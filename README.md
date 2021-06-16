@@ -253,6 +253,30 @@ Pada fitur “Pengajuan” pengguna dapat melihat daftar pengajuan yang telah ia
 
 
 ### Screenshot sistem
+### Log In
+![image](https://user-images.githubusercontent.com/48080443/122154460-464c9000-ce8f-11eb-8929-49221e276c73.png)
+
+### Dashboard User
+![image](https://user-images.githubusercontent.com/48080443/122154638-a04d5580-ce8f-11eb-89b9-3d39c6e41ac3.png)
+
+### Detail Ruangan
+![image](https://user-images.githubusercontent.com/48080443/122154768-e0143d00-ce8f-11eb-88bd-b4edda8998d3.png)
+
+### Pengajuan Ruangan
+![image](https://user-images.githubusercontent.com/48080443/122154844-0508b000-ce90-11eb-83db-ea17aa25fc1d.png)
+![image](https://user-images.githubusercontent.com/48080443/122154886-1b167080-ce90-11eb-8a5a-2f3ea72e967a.png)
+
+### Daftar Pengajuan
+![image](https://user-images.githubusercontent.com/48080443/122154945-31bcc780-ce90-11eb-8f5c-3393c5b24dc3.png)
+
+### Dashboard Admin
+![image](https://user-images.githubusercontent.com/48080443/122155031-57e26780-ce90-11eb-88a3-fc4a51494320.png)
+
+### Detail Pengajuan Admin
+![image](https://user-images.githubusercontent.com/48080443/122155092-747e9f80-ce90-11eb-8bbe-b2790af9ccdf.png)
+![image](https://user-images.githubusercontent.com/48080443/122155108-7c3e4400-ce90-11eb-87ac-55b9bbf71b90.png)
+
+
 ### Link Aplikasi
 
 
