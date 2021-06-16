@@ -17,8 +17,9 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { withRouter } from "react-router";
 import { Box, Container } from "@material-ui/core";
-import { Home, PostAdd } from "@material-ui/icons";
+import { Home } from "@material-ui/icons";
 import Account from "./Account";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -134,9 +135,17 @@ function TemplateNavigationAdmin(props) {
             alignItems="center"
             width="100%"
           >
-            <Typography variant="h2" noWrap>
-              Simaru
-            </Typography>
+            <Link
+              to="/admin/beranda"
+              style={{
+                textDecoration: "none",
+                color: theme.palette.optional.contrastText,
+              }}
+            >
+              <Typography variant="h2" noWrap>
+                Simaru
+              </Typography>
+            </Link>
             <Box
               display="flex"
               justifyContent="space-between"

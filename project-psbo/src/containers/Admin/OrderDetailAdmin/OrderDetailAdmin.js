@@ -1,15 +1,14 @@
 import {
   Box,
-  Button,
   Card,
   CardContent,
   Divider,
   Grid,
   makeStyles,
   Typography,
-  TextField,
 } from "@material-ui/core";
 import FormikAdminOrderForm from "components/formik/FormikAdminOrderForm";
+import SnackAlert from "components/lab/SnackAlert";
 import TemplateNavigationAdmin from "components/layouts/TemplateNavigationAdmin";
 import DataProgress from "components/loading/DataProgress";
 import React, { useEffect, useState } from "react";
@@ -38,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 function OrderDetailAdmin({ match }) {
   const classes = useStyles();
+
+  const [open, setOpen] = useState(false);
+
+  const [alertStatus, setAlertStatus] = useState({});
 
   console.log("ini match", match);
 
@@ -101,6 +104,9 @@ function OrderDetailAdmin({ match }) {
 
   return (
     <TemplateNavigationAdmin>
+      {alertStatus.severity === "success" && (
+        <SnackAlert status={alertStatus} setOpen={setOpen} />
+      )}
       <Box mb={3}>
         <Typography variant="h2">Detail Pengajuan</Typography>
       </Box>
@@ -158,39 +164,11 @@ function OrderDetailAdmin({ match }) {
             <Typography variant="h4">Beri Tanggapan</Typography>
             <Divider className={classes.divider} />
 
-            <div>
-              <TextField
-                id="outlined-full-width"
-                style={{ margin: 4 }}
-                placeholder="Beri Tanggapan Disini..."
-                fullWidth
-                margin="normal"
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                variant="outlined"
-              />
-            </div>
-            <div style={{ width: "100%", textAlign: "center" }}>
-              <Box display="inline" p={1} m={1}>
-                <Button
-                  variant="contained"
-                  style={{ backgroundColor: "#AC0000", color: "#ffffff" }}
-                >
-                  Menolak
-                </Button>
-              </Box>
-              <Box display="inline" p={1} m={1}>
-                <Button
-                  variant="contained"
-                  style={{ backgroundColor: "#005108", color: "#ffffff" }}
-                >
-                  Menyetujui
-                </Button>
-              </Box>
-            </div>
-
-            <FormikAdminOrderForm />
+            <FormikAdminOrderForm
+              setAlertStatus={setAlertStatus}
+              setOpen={setOpen}
+              id={match.params.id}
+            />
           </CardContent>
         </Card>
       )}

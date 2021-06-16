@@ -33,7 +33,7 @@ const postOrder = (values) => {
 
 const putOrder = (values, id) => {
   const url = `${process.env.REACT_APP_BASEURL}/api/pengajuan/update/${id}`;
-  return axios.post(url, values, { headers: authHeader() });
+  return axios.put(url, values, { headers: authHeader() });
 };
 
 const deleteOrder = (id) => {

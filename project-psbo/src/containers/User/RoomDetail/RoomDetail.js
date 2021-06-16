@@ -87,9 +87,7 @@ function RoomDetail({ match }) {
               <Grid item xs={8}>
                 <Box mb={2}>
                   <Typography variant="body2">Deskripsi Ruangan</Typography>
-                  <Typography>
-                    <p>{dataRoom.deskripsiRuangan}</p>
-                  </Typography>
+                  <Typography>{dataRoom.deskripsiRuangan}</Typography>
                 </Box>
                 <Grid container>
                   <Grid item xs={6}>
@@ -138,24 +136,27 @@ function RoomDetail({ match }) {
                     <Typography variant="body2">
                       Jadwal Sudah Booking
                     </Typography>
-                    <Typography varoamt="h5">
+                    <Typography variant="h5">
                       <ul>
                         <li>
                           <p>HIMALKOM IPB</p>
                           <p>Senin, 12 Maret 2021</p>
-                          <p>Pukul 10.00 - 14.00 WIB</p>
+                          <p>pukul 10.00 - 14.00 WIB</p>
                         </li>
                         <li>
                           <p>Jelajah IPB 2021</p>
                           <p>Kamis, 14 Maret 2021</p>
-                          <p>Pukul 11.00 - 14.00 WIB</p>
+                          <p>pukul 11.00 - 14.00 WIB</p>
                         </li>
                       </ul>
                     </Typography>
                   </Box>
                 </Paper>
                 <Box>
-                  <Link to={`/form-pengajuan/${dataRoom._id}`}>
+                  <Link
+                    to={`/form-pengajuan/${dataRoom._id}`}
+                    style={{ textDecoration: "none" }}
+                  >
                     <Button variant="contained" color="secondary" fullWidth>
                       Ajukan Peminjaman
                     </Button>

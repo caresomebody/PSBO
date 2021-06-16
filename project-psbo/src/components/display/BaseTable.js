@@ -21,8 +21,7 @@ import ViewColumn from "@material-ui/icons/ViewColumn";
 import MoreIcon from "@material-ui/icons/More";
 import theme from "styles/theme";
 import localization from "utils/lang/table";
-import { Box, Button, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Box, Typography } from "@material-ui/core";
 
 const tableIcons = {
   Add: forwardRef((props, ref) => (

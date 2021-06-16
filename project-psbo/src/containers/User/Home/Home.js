@@ -203,8 +203,8 @@ function Home() {
                 <Calendar onChange={onChange} value={value} />
               </Box>
               <Box>
-                {calendarDummy.map((data) => (
-                  <Box display="flex" my={2}>
+                {calendarDummy.map((data, index) => (
+                  <Box key={index} display="flex" my={2}>
                     <Avatar src={data.media} className={classes.avatar} />
                     <Box>
                       <Typography variant="h5">{data.title}</Typography>
