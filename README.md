@@ -305,6 +305,9 @@ Karena belum terintegrasi dengan API IPB, berikut username dan password untuk me
 </tbody>
 </table>
 
+Alternatif Link:
+- https://simaru-ipb.netlify.app/
+- https://simaru.vercel.app/
 
 
 # 🤟 Saran untuk Pengembangan Selanjutnya
