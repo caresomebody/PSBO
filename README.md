@@ -294,7 +294,7 @@ Karena belum terintegrasi dengan API IPB, berikut username dan password untuk me
     <tbody>
         <tr>
             <td>pak_kunci</td>
-            <td>admin</td>
+            <td>user</td>
 		<td>Admin</td>
         </tr>
          <tr>
