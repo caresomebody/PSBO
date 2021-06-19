@@ -17,6 +17,8 @@ import changeDateFormat from "utils/helpers/dateFormat";
 import DataProgress from "components/loading/DataProgress";
 import authService from "services/auth.service";
 import { useHistory } from "react-router";
+import filePDF from "utils/dummy/SPJ KOMUNITAS HIMALKOM 2021.pdf";
+
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const useStyles = makeStyles((theme) => ({
@@ -148,7 +150,7 @@ function OrderDetail({ match }) {
             </Grid>
             <Box>
               <Document
-                file={"http://localhost:3000/SPJ KOMUNITAS HIMALKOM 2021.pdf"}
+                file={filePDF}
                 onLoadSuccess={onDocumentLoadSuccess}
                 onLoadError={console.error}
               >

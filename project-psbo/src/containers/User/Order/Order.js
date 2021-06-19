@@ -1,6 +1,7 @@
 import { Box, makeStyles, Paper, Typography } from "@material-ui/core";
 import BaseTable from "components/display/BaseTable";
 import TemplateNavigation from "components/layouts/TemplateNavigation";
+import DataProgress from "components/loading/DataProgress";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import authService from "services/auth.service";
@@ -20,6 +21,7 @@ function Order() {
   const classes = useStyles();
   const currentUser = authService.getCurrentUser();
   const history = useHistory();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchOrders();
@@ -50,6 +52,7 @@ function Order() {
         }));
         console.log("fetchData", fetchData);
         setDataOrders(fetchData);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -93,68 +96,72 @@ function Order() {
           </Typography>
         </Box>
       </Paper>
-      <Paper>
-        <BaseTable
-          title="Data Pengajuan"
-          data={dataOrders}
-          columns={[
-            {
-              title: "Ruangan",
-              field: "roomName",
-            },
-            {
-              title: "Tanggal Upload",
-              field: "tglUpload",
-              render: (rowData) => (
-                <div>{changeDateFormat(rowData.tglUpload, "LLL")}</div>
-              ),
-            },
-            {
-              title: "Status Pengajuan",
-              field: "status",
-              render: (rowData) =>
-                rowData.status === 0 ? (
-                  <Box
-                    bgcolor="#AC0000"
-                    borderRadius="4px"
-                    color={theme.palette.optional.contrastText}
-                    padding={1}
-                    textAlign="center"
-                  >
-                    <Typography variant="h5">Ditolak</Typography>
-                  </Box>
-                ) : rowData.status === 1 ? (
-                  <Box
-                    bgcolor="#606060"
-                    borderRadius="4px"
-                    color={theme.palette.optional.contrastText}
-                    padding={1}
-                    textAlign="center"
-                  >
-                    <Typography variant="h5">Belum ada tindakan</Typography>
-                  </Box>
-                ) : rowData.status === 2 ? (
-                  <Box
-                    bgcolor="#005108"
-                    borderRadius="4px"
-                    color={theme.palette.optional.contrastText}
-                    padding={1}
-                    textAlign="center"
-                  >
-                    <Typography variant="h5">Diterima</Typography>
-                  </Box>
-                ) : (
-                  ""
+      {isLoading ? (
+        <DataProgress />
+      ) : (
+        <Paper>
+          <BaseTable
+            title="Data Pengajuan"
+            data={dataOrders}
+            columns={[
+              {
+                title: "Ruangan",
+                field: "roomName",
+              },
+              {
+                title: "Tanggal Upload",
+                field: "tglUpload",
+                render: (rowData) => (
+                  <div>{changeDateFormat(rowData.tglUpload, "LLL")}</div>
                 ),
-            },
-          ]}
-          handleOpenDetail={handleOpenDetail}
-          onRowDelete={handleDelete}
-          disableAdd
-          disableUpdate
-          disableExport
-        />
-      </Paper>
+              },
+              {
+                title: "Status Pengajuan",
+                field: "status",
+                render: (rowData) =>
+                  rowData.status === 0 ? (
+                    <Box
+                      bgcolor="#AC0000"
+                      borderRadius="4px"
+                      color={theme.palette.optional.contrastText}
+                      padding={1}
+                      textAlign="center"
+                    >
+                      <Typography variant="h5">Ditolak</Typography>
+                    </Box>
+                  ) : rowData.status === 1 ? (
+                    <Box
+                      bgcolor="#606060"
+                      borderRadius="4px"
+                      color={theme.palette.optional.contrastText}
+                      padding={1}
+                      textAlign="center"
+                    >
+                      <Typography variant="h5">Belum ada tindakan</Typography>
+                    </Box>
+                  ) : rowData.status === 2 ? (
+                    <Box
+                      bgcolor="#005108"
+                      borderRadius="4px"
+                      color={theme.palette.optional.contrastText}
+                      padding={1}
+                      textAlign="center"
+                    >
+                      <Typography variant="h5">Diterima</Typography>
+                    </Box>
+                  ) : (
+                    ""
+                  ),
+              },
+            ]}
+            handleOpenDetail={handleOpenDetail}
+            onRowDelete={handleDelete}
+            disableAdd
+            disableUpdate
+            disableExport
+          />
+        </Paper>
+      )}
     </TemplateNavigation>
   );
 }

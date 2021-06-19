@@ -7,7 +7,7 @@ import { withRouter } from "react-router";
 import FormikLogin from "components/formik/FormikLogin";
 import BaseAlert from "components/lab/BaseAlert";
 
-function Login(props) {
+function Login() {
   const [alertStatus, setAlertStatus] = useState({});
   console.log("ini alertstatus", alertStatus);
   return (

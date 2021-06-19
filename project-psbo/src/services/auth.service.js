@@ -1,16 +1,14 @@
 import axios from "axios";
 
-const login = (values) => {
+const login = ({ values }) => {
   return axios
-    .post(`${process.env.REACT_APP_BASEURL}/api/login`, {
-      ...values,
-    })
+    .post(`${process.env.REACT_APP_BASEURL}/api/login`, { ...values })
     .then((response) => {
       const { token } = response.data;
       if (token) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
-      console.log("ini response", response.data);
+      console.log("ini response", response);
       return response.data;
     });
 };

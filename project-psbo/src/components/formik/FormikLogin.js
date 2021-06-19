@@ -7,7 +7,7 @@ import theme from "styles/theme";
 import AuthService from "services/auth.service";
 import { useHistory } from "react-router-dom";
 
-function FormikLogin(setAlertStatus, ...props) {
+function FormikLogin({ setAlertStatus, ...props }) {
   const history = useHistory();
 
   const initialValues = {
@@ -21,8 +21,8 @@ function FormikLogin(setAlertStatus, ...props) {
   });
 
   const handeLogin = async (values, onSubmitProps) => {
-    AuthService.login(values).then(
-      () => {
+    AuthService.login({ setAlertStatus, values })
+      .then(() => {
         const user = AuthService.getCurrentUser();
         if (user != null) {
           const { token, role } = AuthService.getCurrentUser();
@@ -32,25 +32,16 @@ function FormikLogin(setAlertStatus, ...props) {
             history.push("/admin/beranda");
           }
         }
-      },
-      (error) => {
-        console.log("ini error", error);
+      })
+      .catch((error) => {
+        console.log(error.response);
         setAlertStatus({
           severity: "error",
           message: "Gagal login, gunakan username dan password dengan benar",
         });
-      }
-    );
-
+      });
     onSubmitProps.setSubmitting(false);
   };
-
-  // .catch((error) => {
-  //   console.log(error.response);
-  //   setAlertStatus({
-  //     severity: "error",
-  //     message: "Gagal login, gunakan username dan password dengan benar",
-  //   });
 
   return (
     <Formik

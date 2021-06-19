@@ -54,19 +54,19 @@ function OrderForm({ match }) {
 
   const fetchRoom = () => {
     const id = match.params.id;
-    userService.getRoomById(id).then(
-      (response) => {
+    userService
+      .getRoomById(id)
+      .then((response) => {
         setDataRoom(response.data);
         setIsLoading(false);
-      },
-      (error) => {
-        const _data =
-          (error.response && error.response.data) ||
-          error.message ||
-          error.toString();
-        setDataRoom(_data);
-      }
-    );
+      })
+      .catch((error) => {
+        console.log(error);
+        setAlertStatus({
+          severity: "error",
+          message: "Gagal membuat pengajuan, silahkan coba lagi",
+        });
+      });
   };
 
   if (currentUser === undefined || currentUser.role !== 1) {

@@ -7,7 +7,6 @@ import {
   CardMedia,
   Grid,
   IconButton,
-  InputBase,
   makeStyles,
   Paper,
   Typography,
@@ -24,6 +23,8 @@ import AuthService from "services/auth.service";
 import { useHistory } from "react-router-dom";
 import UserService from "services/user.service";
 import DataProgress from "components/loading/DataProgress";
+import SearchBar from "components/searchbar/SearchBar";
+import theme from "styles/theme";
 
 const calendarDummy = [
   {
@@ -60,15 +61,11 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   input: {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(2),
     flex: 1,
   },
   iconButton: {
     padding: 10,
-  },
-  divider: {
-    height: 28,
-    margin: 4,
   },
   media: {
     height: 200,
@@ -80,24 +77,20 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
-
-  const history = useHistory();
   const currentUser = AuthService.getCurrentUser();
-
+  const history = useHistory();
+  const [isLoading, setIsLoading] = useState(true);
   const [value, onChange] = useState(new Date());
 
-  useEffect(() => {
-    fetchRooms();
-  }, []);
-
-  const [dataRooms, setDataRooms] = useState([]);
-  console.log("ini data rooms", dataRooms);
-  const [isLoading, setIsLoading] = useState(true);
+  const [input, setInput] = useState("");
+  const [dataRoomsDefault, setDataRoomsDefault] = useState();
+  const [dataRooms, setDataRooms] = useState();
 
   const fetchRooms = async () => {
     UserService.getRooms()
       .then((response) => {
         setDataRooms(response.data);
+        setDataRoomsDefault(response.data);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -106,7 +99,17 @@ function Home() {
       });
   };
 
-  console.log("ini currentuser", currentUser);
+  const updateInput = async (input) => {
+    const filtered = dataRoomsDefault.filter((data) => {
+      return data.namaRuangan.toLowerCase().includes(input.toLowerCase());
+    });
+    setInput(input);
+    setDataRooms(filtered);
+  };
+
+  useEffect(() => {
+    fetchRooms();
+  }, []);
 
   if (currentUser === undefined || currentUser.role !== 1) {
     history.replace("/");
@@ -126,7 +129,10 @@ function Home() {
                 <Typography variant="h4">
                   Selamat datang, Peminjaman Ruangan
                 </Typography>
-                <Typography>
+                <Typography
+                  variant="h5"
+                  style={{ marginTop: theme.spacing(1) }}
+                >
                   Silahkan cari nama ruangan yang ingin anda ajukan peminjaman!
                 </Typography>
               </CardContent>
@@ -136,10 +142,10 @@ function Home() {
           <Box mb={3}>
             {/* Search Component */}
             <Paper component="form" className={classes.root}>
-              <InputBase
+              <SearchBar
                 className={classes.input}
-                placeholder="Cari Ruangan Disini..."
-                inputProps={{ "aria-label": "cari ruangan disini" }}
+                input={input}
+                onChange={updateInput}
               />
               <IconButton
                 type="submit"
